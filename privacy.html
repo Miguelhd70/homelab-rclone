@@ -1,117 +1,73 @@
+# Política de privacidad de Homelab Rclone
 
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Política de privacidad | Homelab Rclone</title>
-  <meta name="description" content="Política de privacidad de Homelab Rclone, aplicación privada de copias de seguridad en Google Drive.">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 850px;
-      margin: 40px auto;
-      padding: 0 22px;
-      line-height: 1.65;
-      color: #263238;
-    }
-    h1, h2 { color: #17365d; }
-    a { color: #1769aa; }
-    footer {
-      margin-top: 40px;
-      padding-top: 20px;
-      border-top: 1px solid #ddd;
-      font-size: 0.9em;
-    }
-  </style>
-</head>
-<body>
+**Última actualización: 15 de noviembre de 2026.**
 
-<h1>Política de privacidad</h1>
+## 1. Responsable
 
-<p><strong>Última actualización:</strong> 15 de noviembre de 2026.</p>
+Homelab Rclone es una aplicación de uso privado, gestionada por el propietario de una infraestructura doméstica. No ofrece servicios comerciales ni está destinada al uso público.
 
-<h2>1. Responsable y ámbito de aplicación</h2>
+Contacto: miguelhd70@gmail.com
 
-<p>Homelab Rclone es una herramienta de uso privado, gestionada por el propietario de una infraestructura doméstica. No es un servicio público ni ofrece cuentas o servicios a terceros.</p>
+## 2. Datos y permisos utilizados
 
-<p>Esta política describe el tratamiento de los datos de Google asociados a la autorización OAuth utilizada por rclone para gestionar copias de seguridad en la cuenta personal de Google Drive del propietario.</p>
+La aplicación utiliza OAuth 2.0 y la API de Google Drive para acceder a la cuenta autorizada.
 
-<p><strong>Contacto:</strong> miguelhd70@gmail.com</p>
+El permiso solicitado (`https://www.googleapis.com/auth/drive`) permite a rclone acceder ampliamente a los archivos y metadatos de Google Drive, incluyendo consultar, cargar, descargar, modificar y eliminar archivos.
 
-<h2>2. Datos y permisos utilizados</h2>
+Este acceso se utiliza exclusivamente para las operaciones de gestión de copias de seguridad.
 
-<p>La aplicación utiliza la API de Google Drive mediante OAuth 2.0 y el permiso <code>https://www.googleapis.com/auth/drive</code>.</p>
+## 3. Finalidad
 
-<p>Este permiso proporciona a rclone acceso amplio a los archivos y metadatos de Google Drive de la cuenta autorizada. Técnicamente permite listar, consultar, cargar, descargar, modificar y eliminar archivos, según las operaciones que se ejecuten.</p>
+Los datos se utilizan exclusivamente para:
 
-<p>La aplicación utiliza este acceso para realizar operaciones de copia de seguridad y gestión de archivos. No afirma disponer de un permiso restringido exclusivamente a una carpeta.</p>
+- Transferir copias de seguridad desde servidores domésticos.
+- Almacenar archivos en Google Drive.
+- Consultar y verificar los archivos transferidos.
+- Gestionar las versiones y la conservación de las copias.
 
-<h2>3. Finalidad y uso de los datos</h2>
+No se utilizan para publicidad, elaboración de perfiles ni explotación comercial.
 
-<p>Los datos obtenidos mediante Google Drive se utilizan exclusivamente para:</p>
+## 4. Almacenamiento y conservación
 
-<ul>
-  <li>Transferir archivos de copias de seguridad desde los servidores domésticos a Google Drive.</li>
-  <li>Consultar los archivos y directorios necesarios para gestionar las copias.</li>
-  <li>Comprobar la existencia y correspondencia de los archivos transferidos.</li>
-  <li>Administrar las copias de seguridad y sus versiones.</li>
-</ul>
+Los archivos originales se almacenan en servidores privados del propietario y las copias externas en su cuenta personal de Google Drive.
 
-<p>Los datos de Google no se utilizan para publicidad, elaboración de perfiles, análisis comercial ni finalidades ajenas a la gestión de las copias de seguridad.</p>
+Las credenciales OAuth se almacenan en el servidor privado donde se ejecuta rclone y no se publican en este sitio web.
 
-<h2>4. Almacenamiento y conservación</h2>
+Los archivos se conservan según las políticas de retención configuradas por el propietario.
 
-<p>Los archivos originales se almacenan en la infraestructura privada del propietario. Las copias externas se almacenan en su cuenta personal de Google Drive.</p>
+## 5. Comunicación a terceros
 
-<p>Las credenciales OAuth, incluidos los tokens de autorización y renovación, se almacenan en el servidor privado donde se ejecuta rclone, dentro de su configuración protegida.</p>
+Homelab Rclone no vende ni comparte datos con terceros para fines comerciales.
 
-<p>Los archivos se conservan conforme a las políticas de copias de seguridad y retención configuradas por el propietario. No existe una base de datos comercial de usuarios ni un sistema de seguimiento de actividad.</p>
+Google proporciona la infraestructura de almacenamiento y la API de Google Drive, y procesa los datos conforme a sus propias condiciones y política de privacidad.
 
-<h2>5. Comunicación y terceros</h2>
+## 6. Seguridad
 
-<p>Homelab Rclone no vende, alquila ni facilita los datos de Google a terceros para fines comerciales.</p>
+Se aplican medidas razonables de protección, entre ellas:
 
-<p>Google Drive actúa como proveedor externo de la API y del almacenamiento en la nube. Los datos transferidos a Drive son tratados por Google conforme a sus condiciones y políticas de privacidad.</p>
+- Almacenamiento privado de las credenciales OAuth.
+- Restricción de permisos sobre los archivos de configuración.
+- Comunicaciones cifradas mediante HTTPS.
+- Cifrado de determinados archivos sensibles antes de su almacenamiento externo.
 
-<p>No se utilizan intermediarios adicionales para vender, analizar o explotar comercialmente la información.</p>
+## 7. Revocación del acceso
 
-<h2>6. Seguridad</h2>
+El propietario puede retirar la autorización concedida a Homelab Rclone desde su cuenta de Google:
 
-<p>Se aplican medidas razonables para proteger la información, entre ellas:</p>
+https://myaccount.google.com/connections
 
-<ul>
-  <li>Almacenamiento de las credenciales OAuth en el servidor privado.</li>
-  <li>Restricción de permisos de acceso a los archivos de configuración.</li>
-  <li>Uso de conexiones cifradas HTTPS para las comunicaciones con Google.</li>
-  <li>Cifrado de determinados archivos de configuración antes de almacenarlos en la nube.</li>
-</ul>
+La revocación impide futuras operaciones autorizadas, pero no elimina automáticamente los archivos que ya se encuentren almacenados en Google Drive.
 
-<p>Ningún sistema puede garantizar una seguridad absoluta, pero se procura limitar el acceso a los datos al propietario de la infraestructura.</p>
+## 8. Contacto
 
-<h2>7. Revocación del acceso</h2>
+Para cualquier consulta relacionada con la privacidad:
 
-<p>El propietario puede retirar en cualquier momento la autorización concedida a la aplicación desde la configuración de conexiones de terceros de su cuenta de Google:</p>
+miguelhd70@gmail.com
 
-<p><a href="https://myaccount.google.com/connections" target="_blank" rel="noopener noreferrer">Gestionar conexiones de terceros de Google</a></p>
+## 9. Modificaciones
 
-<p>La revocación impide que rclone siga utilizando la autorización retirada. Los archivos que ya se hayan almacenado en Google Drive no se eliminan automáticamente por revocar el permiso.</p>
+Esta política podrá actualizarse cuando cambien las funciones, los permisos o los procedimientos de almacenamiento y seguridad de la aplicación.
 
-<h2>8. Derechos y consultas</h2>
+---
 
-<p>Para cualquier consulta relacionada con esta política o con el tratamiento de los datos, se puede contactar con el responsable en:</p>
-
-<p><a href="mailto:miguelhd70@gmail.com">miguelhd70@gmail.com</a></p>
-
-<h2>9. Modificaciones</h2>
-
-<p>Esta política podrá actualizarse cuando cambien las funciones de la aplicación, los permisos OAuth utilizados o las prácticas de almacenamiento y seguridad.</p>
-
-<footer>
-  <p><a href="index.html">Volver a Homelab Rclone</a></p>
-  <p>Homelab Rclone · Uso privado</p>
-</footer>
-
-</body>
-</html>
-
+[Volver a Homelab Rclone](https://rclone.miguelhd.es/)
